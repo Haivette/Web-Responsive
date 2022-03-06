@@ -1,0 +1,475 @@
+/* Configuraciones globales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Para arreglar cuando tenemos un elemento
+más grande que el elemento que lo contiene
+y se desborda*/
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+html{
+    background-color: rgb(167, 164, 164);
+    color: rgb(14, 92, 236);
+    font-family: 'Indie Flower', cursive;
+    font-weight: 800; /*debería venir en el link del font en html*/
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /*calidad de texto sobre la velocidad*/
+}
+
+section{
+    padding: 80px 0;
+}
+
+/*Encabezados*/
+
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    /*color de letra*/
+    font-size: 250%; /*Es para que no se desconfigure cuando hagas pequeña la pág*/
+    word-spacing: 4px; /*Espaciado entre palabras*/
+    letter-spacing: 1px; /*Espaciado entre letras*/
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: rgb(240, 54, 193); /*línea?*/
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* nav */
+
+/* home-container */
+
+header{
+    /*para transparencia del fondo definido con rgta*/
+    background-image: linear-gradient(rgba(241, 241, 241, 0.705), rgb(241, 241, 241, 0.705)), url(/assets/images/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg);
+    /*para cambiar el tamaño de la imágen de fondo*/
+    background-size: cover;
+    /*para centrar la imágen*/
+    background-position: center;
+    height: 115vh;
+}
+
+.logo{
+    height: 150px;
+    width: auto;
+    float: left;
+    margin-left: 90px;
+}
+
+.nav{
+    float: right;
+    list-style: none;  /*para quitarle los puntos a la lista*/
+    margin-top: 60px;
+    margin-right: 70px;
+}
+
+.nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: rgb(240, 54, 193);
+    font-size: 150%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    transition: border-bottom 0.2s;
+}
+
+.nav li a:hover{
+    border-bottom: 2px solid rgb(235, 10, 205); 
+    /*Para poner línea debajo del texto cuando pases el cursor*/
+}
+
+.home-container{
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 100px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    transform: translate(-50%, 50%);
+}
+
+/*botónes*/
+.btn,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px; /*que esté redondeado*/
+    border: 2px solid rgb(14, 92, 236);
+    color: rgb(69, 54, 207);
+    margin-right: 5px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.btn-more:hover,
+input[type=submit]:hover {
+    background-color: rgb(14, 92, 236);
+    color: whitesmoke;
+}
+
+/* Ya no es necesario porque se puso arriba
+.btn-contact{
+    color: rgb(69, 54, 207)
+}
+*/
+
+.btn-contact:hover{
+    background-color: rgb(14, 92, 236);
+    color: whitesmoke;
+}
+
+/* Section-Description */
+.text-center{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    color: rgb(69, 54, 207);
+}
+
+/*Section plans*/
+
+.section-plans{
+    background-color: rgb(238, 232, 238);
+}
+
+.plan-content{
+    background-color: rgb(253, 170, 253);
+    color: rgb(73, 70, 70);
+    border-radius: 5px;
+    width: 90%;
+    margin-right: 5%;
+    box-shadow: 8px 6px 2px rgb(146, 146, 156); /*Izquierda, abajo, arriba*/
+    text-align: center;
+}
+
+.plan-content div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(240, 241, 243); 
+    /*Para subdivisión de cuadros*/
+}
+
+.btn-Ingresa{
+    color: (69, 54, 207);
+}
+
+.btn-Ingresa:hover{
+    background-color: rgb(240, 54, 193);
+    border: rgb(240, 54, 193);
+    color: white;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:rgb(69, 54, 207)
+}
+
+.plan-content ul{
+    list-style: none;
+}
+
+.plan-content ul li{
+    padding: 5px 0; /*arriba y abajo*/
+}
+
+.plan-price-discount{
+    color: rgb(69, 54, 207);
+}
+
+/*Section-Image*/
+
+.section-image{
+    background-color: white;
+    color: rgb(240, 54, 193);
+}
+
+.projects-image{
+    list-style: none;
+    width: 100%;
+}
+
+.projects-image li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /*Recorta el elemento y oculta lo que nos sobra*/
+    background-color: black;
+}
+
+.photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;  /*Propiedad para los diferentes navegarores*/
+                                               /*Que la imágen se vea más amplia*/
+    -webkit-transform: scale(1.15);            /*En qué tiempo queremos que suceda esto*/
+    -ms-transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+}
+
+.photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);  /*para que se haga pequeña la imagen cuando pasas el cursor*/
+}
+
+/* Contact*/
+
+.section-form{
+    background-color: rgb(253, 170, 253);
+}
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto; /*Para centrarlo*/
+}
+
+/*Para seleccionar varios y que todos los inputs tengan el mismo diseño*/
+input[type=text],
+input[type=mail],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px; /*Para que se vean redondeados*/
+    border: 1px solid rgb(69, 54, 207);
+}
+
+textarea{
+    height: 100%;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+/* image footer */
+
+.section-img-footer{
+    background-image: -webkit-linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url(/assets/images/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg); /*para firefox*/
+    background-image: -linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url(/assets/images/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg);
+    background-size: cover;
+    color: violet;
+    background-attachment: fixed;
+    /*Para darle un efecto cool de atras a la sección*/
+}
+
+/*footer*/
+
+footer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    font-size: 80%;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.footer-nav li a,
+.social-links li,
+.social-links li a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    border: 0;
+    color: white;
+    -webkit-transition: color 0.2s;
+    transition: 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: rgb(240, 54, 193);
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 160%;
+}
+
+.fa-facebook-square{
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+/*colores reales de íconos*/
+
+.fa-facebook:hover{
+    color: #3b5998;
+}
+
+.fa-twitter:hover{
+    color: #00aced;
+}
+
+.fa-google:hover{
+    color: #dd4b39;
+}
+
+.fa-instagram:hover{
+    color: #517fa4;
+}
+
+footer p{
+    color: violet;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* para tablets grandes o grandes de 1023x a 1200px */
+@media only screen and (max-width:1200px) {
+    .home-container{
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    .row{
+        padding: 0 2%;
+    }
+}
+
+/* para tablets pequeñas o grandes de 768px a 1023px */
+@media only screen and (max-width:1023px) {
+    body{
+        font-size: 18px;
+    }
+
+    section{
+        padding: 60px 0;
+    }
+
+    .text-center{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .plan-content{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .plan-price{
+        font-size: 250%;
+    }
+
+    .contact-form{
+        width: 80%;
+    }
+}
+
+/* para teléfonos o tablets pequeñass de 481px a 767px */
+@media only screen and (max-width:767px) {
+    body{
+        font-size: 16px;
+    }
+
+    section{
+        padding: 30px 0;
+    }
+
+    .row,
+    .home-container{
+        padding: 0 4%;
+    }
+
+    .col{
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+
+    h1{
+        font-size: 180%;
+    }
+
+    h2{
+        font-size: 150%;
+    }
+
+    .text-center{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+/* para teléfonos pequeños de 0 a 480px (puntos de quiebre) */
+
+@media only screen and (max-width:480px) {
+    section{
+        padding: 25px 0;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .home-container{
+        margin-top: 140px;
+    }
+}

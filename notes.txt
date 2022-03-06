@@ -1,0 +1,8 @@
+https://fontawesome.com/ - para poner íconos
+
+https://fonts.google.com/ catálogo libre de derechos de fuentes (+)
+
+https://necolas.github.io/normalize.css/ Normalize: mantiene todos los estilos iguales en los navegadores
+lo puse en la carpeta ccs
+
+http://www.responsivegridsystem.com/ columnas y así
